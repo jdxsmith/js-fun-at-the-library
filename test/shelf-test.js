@@ -6,11 +6,11 @@ var searchShelf = require("../src/shelf.js").searchShelf;
 
 describe("shelf.js", function() {
   describe("shelfBook", function() {
-    it.skip("should be a function", function() {
+    it("should be a function", function() {
       assert.isFunction(shelfBook);
     });
   
-    it.skip("should add books to a specific shelf", function() {
+    it("should add books to a specific shelf", function() {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
@@ -32,7 +32,7 @@ describe("shelf.js", function() {
       assert.equal(sciFiShelf[1], hyperion);
     });
   
-    it.skip("should add another book to the shelf", function() {
+    it("should add another book to the shelf", function() {
       var hyperion = {
         title: "Hyperion",
         mainCharacter: { name: "The Shrike", age: null, pronouns: "they" },
@@ -101,7 +101,7 @@ describe("shelf.js", function() {
   });
 
   describe("unshelfBook", function() {
-    it.skip("should be a function", function() {
+    it("should be a function", function() {
       assert.isFunction(unshelfBook);
     });
   
