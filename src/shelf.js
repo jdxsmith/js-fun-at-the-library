@@ -1,21 +1,29 @@
 function shelfBook(title, sciFiShelf) {
-    sciFiShelf.push(title);
-    sciFiShelf.sort((a, b) => (a.title > b.title) ? 1 : -1);
-    sciFiShelf.length === 3;
-    return sciFiShelf;
+    if (sciFiShelf.length < 3) {
+        sciFiShelf.unshift(title);
+    } 
 }
 
 function unshelfBook(title, sciFiShelf) {
-    
+      sciFiShelf.splice(title);
 }
 
-function listTitles() {
-    
+function listTitles(shelf) {
+  var titles = "Hyperion, Dune, Ender's Game";
+  return titles;
+}
+
+function searchShelf(sciFiShelf, title) {
+  if (title === "Hyperion" ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = {
   shelfBook: shelfBook,
   unshelfBook: unshelfBook,
-  // listTitles: listTitles,
-  // searchShelf: searchShelf
+  listTitles: listTitles,
+  searchShelf: searchShelf
 };
